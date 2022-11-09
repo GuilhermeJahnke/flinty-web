@@ -1,4 +1,4 @@
-// IIFE with jQuery Wrapper
+
 (function ($) {
   'use strict';
 
@@ -41,21 +41,6 @@
    */
   $(document).ready(function () {
 
-    // Add Class in scrolling
-    $(window).scroll(function () {
-      var scroll = $(window).scrollTop();
-      //console.log(scroll);
-      if (scroll > 200) {
-        //console.log('a');
-        $('.navigation').addClass('sticky-header');
-      } else {
-        //console.log('a');
-        $('.navigation').removeClass('sticky-header');
-      }
-    });
-
-
-    // mouse hover effect
     // filter
     $(document).ready(function () {
       var containerEl = document.querySelector('.filtr-container');
@@ -70,29 +55,12 @@
       });
     });
 
-    /* Popup Video */
-    $('#th-video').magnificPopup({
-      items: [{
-        src: 'video/ocean.mp4',
-        type: 'iframe' // this overrides default type
-      }],
-      gallery: {
-        enabled: true
-      },
-      type: 'image' // this is default type
-    });
 
-    /* Popup Image */
-    $('.image-link').magnificPopup({
-      type: 'image'
-    });
-
-    // DOM Content Load Event Actions;
     $(window).load(function () {
       $('div.loading').remove();
       $('body').removeClass('loading');
     });
 
-  }); // DOM Ready
+  }); 
 
-}(jQuery)); // IIFE
+}(jQuery)); 
